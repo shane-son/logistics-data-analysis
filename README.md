@@ -85,32 +85,34 @@
 ## 6. 데이터 컬럼 설계
 
 - 주문/상품 식별 영역(기본 키)  
-  - `order_id` : 주문 단위 식별자  
-  - `product_id` : 취소된 상품 식별자  
-  - `category` : 상품 카테고리 (`채소`, `과일`, `가공식품`, `우유`, `축산`)  
-  - `sku_option` : 동일 상품 내 옵션 정보
+  - 'order_id' : 주문 단위 식별자  
+  - 'product_id' : 취소된 상품 식별자(상품 바코드)
+  - 'category' : 상품 카테고리 (`채소`, `과일`, `가공식품`, `우유`, `축산`)  
+  - 'sku_option' : 동일 상품 내 옵션 정보
 
 - 취소 발생 정보  
-  - `cancel_reason` : 취소 사유 (`오집`, `미집`, `집품파손`, `리빈파손`)  
-  - `damage_flag` : 파손 여부 (`집품파손`, `리빈파손`이면 1, 아니면 0)  
-  - `quality_issue_flag` : 품질 저하 여부  
-  - `stock_location` : 상품 보관 위치  
-  - `cancel_time` : 취소 발생 시점  
+  - 'cancel_type' : 취소 사유 ('단순취소' , '운영취소')
+  - 'cancle_reason' : 취소 사유 ('오집', '미집', '집품파손', '리빈파손')  
+  - 'damage_flag' : 파손 여부 ('집품파손'or'리빈파손' 이면 1, 아니면 0)  
+  - 'quality_issue_flag' : 품질 저하 여부  
+  - 'stock_location' : 상품 보관 위치  
+  - 'cancel_time' : 취소 발생 시점  
 
 - 작업 환경 정보  
-  - `worker_type` : 작업자 숙련도 (`experienced`, `novice`)  
-  - `is_peak_time` : 피크 시간대 여부(0/1)  
-  - `location_known` : 상품 위치 정보 확인 가능 여부(0/1)
+  - 'worker_type' : 작업자 숙련도 (`experienced`, `novice`)  
+  - 'is_peak_time' : 피크 시간대 여부(0/1)  
+  - 'location_known' : 상품 위치 정보 확인 가능 여부(0/1)
 
 - 처리 속도 분석 영역  
-  - `process_time` : 취소 처리 완료 시점  
-  - `process_delay_min` : 취소 발생 후 처리 완료까지 걸린 시간(분)  
+  - 'process_time' : 취소 처리 완료 시점  
+  - 'process_delay_min' : 취소 발생 후 처리 완료까지 걸린 시간(분)  
 
 - 재고 재사용 분석 영역  
-  - `restock_flag` : 취소 상품이 재고로 다시 반영되었는지 여부(0/1)  
-  - `inspection_flag` : 검수 진행 및 통과 여부(0/1)  
-  - `reused_flag` : 다른 주문에 재사용되었는지 여부(0/1)  
-  - `additional_cancel_flag` : 재사용 실패 이후 추가 취소 발생 여부(0/1)
+  - 'restock_flag' : 취소 상품이 재고로 다시 반영되었는지 여부(0/1)  
+  - 'inspection_done' : 검수 진행 및 통과 여부(진행 여부 - 검수완료 1, 검수중 0)
+  - 'inspection_pass' : 검수 진행 및 통과 여부(통과 여부 - 사용가능 1, 사용불가 0)
+  - 'reused_flag' : 다른 주문에 재사용되었는지 여부(0/1)
+  - 'additional_cancel_flag' : 재사용 실패 이후 추가 취소 발생 여부(0/1)
 
 - 재사용 상품 탐색 시간 영역  
   - `search_start_time` : 동일 상품 재사용 판단 시작 시점  
