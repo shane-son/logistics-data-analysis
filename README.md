@@ -9,7 +9,7 @@
 ![Simulation](https://img.shields.io/badge/Analysis-Simulation-245BD6)
 ![Version](https://img.shields.io/badge/Version-v14-lightgrey)
 
-[![웹 포트폴리오](https://img.shields.io/badge/Portfolio-View%20analysis-245BD6?style=for-the-badge&logo=githubpages&logoColor=white)]([./main_analysis.ipynbhttps://shane-son.github.io/logistics-data-analysis/#project](https://shane-son.github.io/logistics-data-analysis/)
+[![웹 포트폴리오](https://img.shields.io/badge/Portfolio-View%20analysis-245BD6?style=for-the-badge&logo=githubpages&logoColor=white)](https://shane-son.github.io/logistics-data-analysis/#project)
 [![분석 노트북](https://img.shields.io/badge/Notebook-View%20code-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](./main_analysis.ipynb)
 
 <!-- 배포 전: 위 Portfolio 주소의 YOUR-GITHUB-ID와 YOUR-REPO를 실제 GitHub Pages 주소에 맞게 수정하세요. -->
@@ -25,7 +25,7 @@
 | 운영취소 확정 건수 | 977 | 826 | **−15.46%** |
 | 평균 조회 준비 지연 | 11.91분 | 0.07분 | **−11.84분** |
 
-기준 시나리오에서 운영취소 대상 2,141개 중 자동화로 151개의 추가 운영취소를 예방할 수 있었습니다. 상세 결과는 [웹 포트폴리오]([./main_analysis.ipynbhttps://shane-son.github.io/logistics-data-analysis/#main-results](https://shane-son.github.io/logistics-data-analysis/)에서 확인할 수 있습니다.
+기준 시나리오에서 운영취소 대상 2,141개 중 자동화로 151개의 추가 운영취소를 예방할 수 있었습니다. 상세 결과는 [웹 포트폴리오](https://shane-son.github.io/logistics-data-analysis/#main-results)에서 확인할 수 있습니다.
 
 ## 02. 프로젝트 배경 및 문제 정의
 
@@ -200,7 +200,7 @@ def complete_scenario(base_df, process_type='manual', tool_usage_rate=1.0):
 
 | 자료 | 링크 |
 | :--- | :--- |
-| 웹 포트폴리오 | [메인 분석 페이지 열기]([https://shane-son.github.io/logistics-data-analysis/](https://shane-son.github.io/logistics-data-analysis/) |
+| 웹 포트폴리오 | [메인 분석 페이지 열기](https://shane-son.github.io/logistics-data-analysis/#project) |
 | 분석 코드 | [Jupyter Notebook v14](./main_analysis.ipynb) |
 
 Python 환경에서 `pandas`, `numpy`, `matplotlib`, `jupyter`를 설치하고 Notebook을 위에서부터 실행하면 가상 데이터 생성부터 결과 산출까지 재현할 수 있습니다. 기존 v14 검증 기록상 34개 코드 셀 계산 실행 및 주요 무결성 검사를 통과했습니다(그래프 이미지 출력 생략). 실제 운영 로그 검증은 아닙니다.
